@@ -13,16 +13,14 @@ export default function Page1() {
       className="col"
       componentProps={{ span: 8 }}
     >
-      <div key="image" className="image" /> 
-        <img src={(d.src)}/>
-      {/* style={{ backgroundImage: `url(${d.src})` }} */}
+      <div key="image" className="image" style={{ backgroundImage: `url(${d.src})`, backgroundSize: 'contain'}}/> 
       <h3 key="h3">{d.title}</h3>
       <p key="p">{d.content}</p>
     </QueueAnim>
   ));
   return (
     <div className="home-layout-wrapper home-func-wrapper" id="home-func" >
-      <h2>功能介绍</h2>
+      <h2>功能介紹</h2>
       <i className="line" />
       <OverPack className="home-layout" location="home-func" playScale={0.4}>
         <QueueAnim className="home-func" type="bottom" key="home-func" ease="easeOutQuart" leaveReverse>
